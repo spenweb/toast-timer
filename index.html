@@ -1,0 +1,91 @@
+<html>
+<head>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="bulma.css">
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="background"></div>
+<div class="modal is-active">
+  <div class="modal-background"></div>
+  <div class="modal-content full-width cushion">
+  	<div class="box">
+	  	<div class="field">
+		  	<div class="control">
+		  		<input class="input center italic big-button" type="number" placeholder="minimum time in minutes" autofocus name="low" id="low"><br/>
+		  	</div>
+	  	</div>
+	  	<div class="field">
+		  	<div class="control">
+		  		<input class="input center italic big-button" type="number" placeholder="maximum time in minutes" name="high" id="high"><br/>
+		  	</div>
+	  	</div>
+
+	  	<a class="button is-success is-outlined full-width big-button startTimer">Start</a>
+	</div>
+  </div>
+</div>
+
+<div class="big-time-container">
+	<div class="big-time digital-watch"><span class="min">00</span>:<span class="sec">00</span></div>
+</div>
+
+<div class="section dash-board no-padding">
+	<div class="container">
+		<div class="box">
+			<div class="field is-grouped is-grouped-multiline stats">
+			  <div class="control" style="margin-left:auto;">
+			    <div class="tags has-addons">
+			      <span class="tag is-dark">Time</span>
+			      <span class="tag is-info"><span class="min">00</span>:<span class="sec">00</span></span>
+			    </div>
+			  </div>
+
+			  <div class="control">
+			    <div class="tags has-addons">
+			      <span class="tag is-dark">Minimum</span>
+			      <span class="tag is-success"><span id="lowDisplay"></span></span>
+			    </div>
+			  </div>
+
+			  <div class="control" style="margin-right:auto">
+			    <div class="tags has-addons">
+			      <span class="tag is-dark">Maximum</span>
+			      <span class="tag is-primary"><span id="highDisplay"></span></span>
+			    </div>
+			  </div>
+			</div>
+
+			<progress class="progress" value="0" max="100">0%</progress>
+
+			<div class="columns">
+				<div class="column">
+					<a class="button is-success is-outlined full-width big-button startTimer shadow" id="startTimer-dash" disabled>Start</a>
+				</div>
+				<div class="column">
+					<a class="button is-danger is-outlined full-width big-button shadow" id="stopTimer">Stop</a>
+				</div>
+				<div class="column">
+					<a class="button is-outlined full-width big-button shadow" id="resetTimer">Resest</a>
+				</div>
+			</div>
+
+
+			<audio id="overtime-song">
+				<source src="playing-you-off.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+			</audio>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="NoSleep.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
